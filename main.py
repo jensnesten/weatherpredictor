@@ -2,7 +2,7 @@
 import pandas as pd
 import math 
 from sklearn.linear_model import Ridge
-weather = pd.read_csv("weather.csv", index_col="DATE")
+weather = pd.read_csv("./Data/weather.csv", index_col="DATE")
 
 null_pct = weather.apply(pd.isnull).sum()/weather.shape[0]
 valid_col = weather.columns[null_pct < .05]
